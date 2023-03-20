@@ -1,4 +1,4 @@
-# INSTALL REACT-NATIVE
+# INSTALL REACT-NATIVE-EXPO
 - BUKA FOLDER TEMPAT AKAN MENYIMPAN PROJECT
 - KLIK KANAN -> OPEN IN TERMINAL. ATAU BUKA CMD
 - `npx create-expo-app hello-world-rn`, lalu `y`
@@ -9,6 +9,12 @@
 - UNTUK RUN REACT-NATIVE DI WEB
 - `npm install react-native-web react-dom @expo/webpack-config`
 - `npm run web`
+
+# INSTALL REACT-NATIVE-CLI
+- npx react-native@latest init ExampleRnCli
+- cd ExampleRnCli
+- code .
+- npm run android
 
 # INSTALL FLUTTER
 - DOWNLOAD FLUTTER SDK
@@ -31,7 +37,7 @@
 - PINDAHKAN KE `C:/src/android-sdk`
 - MASUK KE `C:/src/android-sdk/cmdline-tools/tools/bin` LALU OPEN DI TERMINAL
 - RUN `sdkmanager` KALO GAGAL INSTALL JAVA SDK DULU
-- RUN `sdkmanager --install "platform-tools"  build-tools;28.0.3 platforms;android-29`
+- RUN `sdkmanager --install "platform-tools"  "build-tools;30.0.3" "platforms;android-33"`
 - COPY FOLDER `platforms` DAN `platform-tools` DARI `C:\src\android-sdk` KE `C:\Users\user\AppData\Local\Android\Sdk`
 - MASUK KE ENV VARIABLES, TAMBAHKAN PATH `ANDROID_HOME`, ISI VALUE DENGAN `C:\Users\user\AppData\Local\Android\Sdk`
 - MASIH DI ENV VARIABLES, EDIT `Path` LALU TAMBAHKAN `C:\Users\user\AppData\Local\Android\Sdk\platform-tools`
