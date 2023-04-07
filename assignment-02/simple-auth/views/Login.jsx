@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { Alert, Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -45,7 +46,15 @@ const Login = () => {
   }
 
   const handleSubmit = () => {
-    Alert.alert(`email: ${formData.email}\npassword: ${formData.password}`)
+    axios.post('https://nestjs-adminjs.vercel.app/user/login', formData)
+      .then(res => {
+        console.log(res)
+        Alert.alert(`Wellcome ${formData.email}`)
+      })
+      .catch(err => {
+        Alert.alert(`Invalid Credentials`)
+        console.log(err)
+      })
     setFormData(INIT_FORM_DATA)
   }
 
